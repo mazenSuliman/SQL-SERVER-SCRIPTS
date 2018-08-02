@@ -1,0 +1,7 @@
+SELECT * FROM TransPayments
+WHERE PatientID = (SELECT ID FROM Patients WHERE FileNum = 554436)
+	AND TransDate BETWEEN '2018-03-01 00:00:00' AND '2018-03-31 00:00:00'
+
+SELECT * FROM TransPayments
+--UPDATE TransPayments SET Amount = 3000
+WHERE ID = 306776

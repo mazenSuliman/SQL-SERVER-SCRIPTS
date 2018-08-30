@@ -19,7 +19,7 @@ SELECT    ANTIBIOTICS.TDID						AS ID
 		, ANTIBIOTICS.Data						AS RESULT
 
 
-FROM TransHdr			H		WITH (NOLOCK)
+FROM	 TransHdr		H		WITH (NOLOCK)
 	JOIN TransDtl		D		WITH (NOLOCK) ON D.TransHdrID	= H.ID
 	JOIN Patients		P		WITH (NOLOCK) ON H.PatientID	= P.ID
 	JOIN Admissions		A		WITH (NOLOCK) ON H.AdmissionID	= A.ID
